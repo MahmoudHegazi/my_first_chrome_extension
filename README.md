@@ -5,4 +5,4 @@ Simple extension to get the weather and to change the current page background co
 https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
 
-![simple.JPG]('screenshot')
+!('screenshot')[simple.JPG]
