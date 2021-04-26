@@ -11,9 +11,11 @@ let getTemp = async () => {
   req = await fetch('https://api.openweathermap.org/data/2.5/weather?zip=66614,us&units=metric&appid=db6608063a9d72758e29ea323da07bd1');
   res = await req.json();
   let newdate = new Date();
+  let full_date = (newdate.getMonth() + 1) + "-" + newdate.getDate() + "-" + newdate.getFullYear();
+  let time = newdate.getHours() + ":" + newdate.getMinutes() + ":" + newdate.getSeconds();
   let lastupdate = newdate;
   tempspan.innerText = res.main.temp;
-  updatetext.innerText = (newdate.getMonth() + 1) + "-" + newdate.getDate() + "-" + newdate.getFullYear();
+  updatetext.innerText =  full_date + " " + time;
 }
 
 weaterbtn.addEventListener("click", async () => {
