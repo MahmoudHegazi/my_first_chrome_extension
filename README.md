@@ -3,3 +3,6 @@ Simple extension to get the weather and to change the current page background co
 
 
 https://developer.chrome.com/docs/extensions/mv3/getstarted/
+
+
+('screenshot')['simple.JPG']
