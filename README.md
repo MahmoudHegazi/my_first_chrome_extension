@@ -13,15 +13,37 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
 ```javascript
 let index_const = 0;
+const append_btn = (elm)=>{
+   const newbtn = document.createElement("button");
+   newbtn.setAttribute("class", "awesome_btn");
+   newbtn.innerText = "Remove Card";
+   elm.appendChild(newbtn);
+}
 const advanced_get1 = ()=> {
  if (index_const == 0){
+    let allcards = document.querySelectorAll(".Projects-cover-1nk");
     index_const = document.querySelectorAll(".Projects-cover-1nk").length;
-  console.log(document.querySelectorAll(".Projects-cover-1nk").length);
+    
+    // this case is first normal case
+    allcards.forEach( (card, index)=>{
+      append_btn(card);
+    });
+    console.log(index_const);
  } else {
    let newcheck = document.querySelectorAll(".Projects-cover-1nk").length;
 
    if (newcheck > index_const){
-     index_const = newcheck; console.log(document.querySelectorAll(".Projects-cover-1nk").length);
+     let new_cards = Array.from(document.querySelectorAll(".Projects-cover-1nk"));
+     let start_point = newcheck - index_const;
+     console.log(start_point);
+     // here we need use last index
+     let unqiue_cards = new_cards.slice(index_const, new_cards.length);
+     
+     unqiue_cards.forEach( (card, index)=>{
+      append_btn(card);
+     });
+     index_const = newcheck;
+     console.log(index_const);
    } else{
        return false;
    }
