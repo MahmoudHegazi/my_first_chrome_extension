@@ -14,9 +14,17 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 ```javascript
 let index_const = 0;
 const append_btn = (elm)=>{
+if (set1 == 0){
+elm.parentElement.parentElement.style.display = "flex";
+}
    const newbtn = document.createElement("button");
    newbtn.setAttribute("class", "awesome_btn");
+   letcard = elm;
+   newbtn.addEventListener("click", ()=>{
+      elm.parentElement.remove();
+   });
    newbtn.innerText = "Remove Card";
+   newbtn.style = "  height: 40px;width: 150px;border: 2px solid #BFC0C0;margin: 20px 20px 20px 20px;color: #BFC0C0;text-transform: uppercase;text-decoration: none;font-size: .8em;letter-spacing: 1.5px;align-items: center;justify-content: center;overflow: hidden;background: brown;cursor: pointer;color: #BFC0C0;";
    elm.appendChild(newbtn);
 }
 const advanced_get1 = ()=> {
