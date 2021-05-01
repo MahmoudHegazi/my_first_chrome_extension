@@ -12,6 +12,7 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 # function to get unique cards with preformance:
 
 ```javascript
+let index_const = 0;
 const advanced_get1 = ()=> {
  if (index_const == 0){
     index_const = document.querySelectorAll(".Projects-cover-1nk").length;
