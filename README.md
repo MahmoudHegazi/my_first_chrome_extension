@@ -14,9 +14,6 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 ```javascript
 let index_const = 0;
 const append_btn = (elm)=>{
-if (set1 == 0){
-elm.parentElement.parentElement.style.display = "flex";
-}
    const newbtn = document.createElement("button");
    newbtn.setAttribute("class", "awesome_btn");
    letcard = elm;
@@ -60,5 +57,4 @@ const advanced_get1 = ()=> {
 }
 window.addEventListener("scroll", advanced_get1);
 advanced_get1();
-
 ```
